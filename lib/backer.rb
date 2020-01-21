@@ -1,0 +1,1 @@
+bob = Backer.now("Bob")
