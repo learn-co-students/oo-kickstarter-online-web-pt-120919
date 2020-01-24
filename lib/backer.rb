@@ -9,11 +9,11 @@ class Backer
   end
   
   def back_project(project)
-    @project = Project.new(project)
-  @backed_projects << project
+    @backed_projects << project
+    if project.backers.include?(self) == false 
+    project.add_backer(self)
+  end
 end
-
-
     
   
   def self.all 
